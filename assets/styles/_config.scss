@@ -1,0 +1,20 @@
+@import "./_colors.scss";
+
+$primary: $color--primary;
+$info: $color--info;
+$success: $color--secondary;
+//$warning: blue;
+//$danger: indigo;
+//$light: lightgrey;
+$dark: $color--black;
+
+$footer-padding: 1.5rem;
+
+$transition-duration: 300ms;
+$transition-duration--fast: 150ms;
+$transition-duration--slow: 500ms;
+$transition-duration--verySlow: 1000ms;
+
+
+@import "~bulma/sass/utilities/_all.sass";
+

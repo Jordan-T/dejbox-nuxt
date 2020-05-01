@@ -16,14 +16,25 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+
+  loaders: {
+    css: {
+      modules: true
+    }
+  },
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#FF5A4F' },
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~/assets/styles/main.scss'],
+
+  styleResources: {
+    scss: ['./assets/styles/_config.scss']
+  },
+
   /*
    ** Plugins to load before mounting the App
    */
@@ -35,7 +46,9 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module'
+    '@nuxtjs/stylelint-module',
+    // Doc: https://typescript.nuxtjs.org/
+    '@nuxt/typescript-build'
   ],
   /*
    ** Nuxt.js modules
@@ -45,7 +58,9 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    // Doc: https://github.com/nuxt-community/style-resources-module
+    '@nuxtjs/style-resources'
   ],
   /*
    ** Axios module configuration
